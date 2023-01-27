@@ -1,12 +1,12 @@
-import { TitleStrategy } from '@angular/router';
+
 import { AppService } from './app.service'; 
-import { Component, OnInit } from '@angular/core';
+import { Component, } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-
+  providers: [AppService]
 })
 
 export class AppComponent {
@@ -18,11 +18,11 @@ export class AppComponent {
 
   ngOnInit():void{
   
- 
+      console.log('hola')
         this.conect.getmas().subscribe((e)=>{
-          this.personas= Object.values(e)
-
           
+          this.personas= Object.values(e)
+          console.log(this.personas)
     })
     
 

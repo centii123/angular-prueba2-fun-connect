@@ -6,7 +6,7 @@ import { Observable, } from 'rxjs';
 
 @Injectable()
 export class AppService {
-  url='http://localhost:3000'
+  url='http://localhost:3000?limit=3&offset=1'
 
   constructor(public conect:HttpClient) { }
 
